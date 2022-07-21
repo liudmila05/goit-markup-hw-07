@@ -5,10 +5,10 @@
 
 .page-header__items {
     margin-right: 50px;
-}
 
-.page-header__items:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .page-header__link-nav {
@@ -27,6 +27,12 @@
     color: var(--title-text-color);
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--accent-color);
+    }
 }
 
 .page-header__link-nav--active {
@@ -45,10 +51,4 @@
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);
-}
-
-.page-header__link-nav:hover,
-.page-header__link-nav:focus,
-.page-header__link-nav:active {
-    color: var(--accent-color);
 }

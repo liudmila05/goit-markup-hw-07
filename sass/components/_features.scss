@@ -1,5 +1,6 @@
 .features__list {
     display: flex;
+    @extend %list;
 }
 
 .features__items {
@@ -37,8 +38,4 @@
 
     background: var(--light-font-color);
     border-radius: 4px;
-}
-
-.features__list {
-    @extend %list;
 }

@@ -14,6 +14,7 @@
 
 .address {
     display: inline-block;
+    @extend %list;
 }
 
 .address__text {
@@ -37,12 +38,12 @@
     color: var(--secondary-text-color);
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.address__link:hover,
-.address__link:focus,
-.address__link:active {
-    color: var(--accent-color);
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--accent-color);
+        }
 }
 
 .footer__text-invitations {
@@ -53,9 +54,6 @@
     text-transform: uppercase;
 
     color: var(--white-color);
-}
-
-.footer__text-invitations {
     margin-bottom: 20px;
 }
 
@@ -70,6 +68,7 @@
 
 .footer__list {
     display: flex;
+    @extend %list;
 }
 
 .footer__list .footer__items+.footer__items {
@@ -84,6 +83,12 @@
     background-color: rgba(255, 255, 255, 0.1);
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--accent-color);
+    }
 }
 
 .footer__icon {
@@ -91,15 +96,4 @@
     margin: auto;
     height: 100%;
     fill: var(--white-color);
-}
-
-.footer__link:hover,
-.footer__link:focus,
-.footer__link:active {
-    background-color: var(--accent-color);
-}
-
-.address,
-.footer__list {
-    @extend %list;
 }

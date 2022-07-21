@@ -61,25 +61,25 @@
     background-color: transparent;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: var(--accent-color);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    &:hover .social-network__icon,
+    &:focus .social-network__icon,
+    &:active .social-network__icon {
+        fill: var(--white-color);
+    }
 }
 
 .social-network__icon {
     fill: var(--icon-socialy-color);
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-networks__link:hover,
-.social-networks__link:focus,
-.social-networks__link:active {
-    background: var(--accent-color);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.social-networks__link:hover .social-network__icon,
-.social-networks__link:focus .social-network__icon,
-.social-networks__link:active .social-network__icon {
-    fill: var(--white-color);
 }
 
 .social-networks .social-networks__items+.social-networks__items {

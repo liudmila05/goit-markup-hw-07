@@ -18,12 +18,18 @@
 .form-modal__field {
     margin-bottom: 10px;
     width: 100%;
-}
 
-.form-modal__field:hover .form-modal__data-input,
-.form-modal__field:focus .form-modal__data-input,
-.form-modal__field:focus-within .form-modal__data-input {
-    border: 1px solid var(--accent-color);
+    &:hover .form-modal__data-input,
+    &:focus .form-modal__data-input,
+    &:focus-within .form-modal__data-input {
+        border: 1px solid var(--accent-color);
+    }
+
+    &:hover .form-modal__icon,
+    &:focus .form-modal__icon,
+    &:focus-within .form-modal__icon {
+    fill: var(--accent-color);
+    }
 }
 
 .form-modal__data-label {
@@ -69,12 +75,6 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-modal__field:hover .form-modal__icon,
-.form-modal__field:focus .form-modal__icon,
-.form-modal__field:focus-within .form-modal__icon {
-    fill: var(--accent-color);
-}
-
 .form-modal__textarea {
     height: 120px;
     padding: 12px 16px;
@@ -85,14 +85,14 @@
     letter-spacing: 0.01em;
 
     resize: none;
-}
 
-.form-modal__textarea::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
 
 .checkbox-form__label {
